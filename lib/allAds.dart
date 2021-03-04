@@ -12,6 +12,7 @@ class allAds extends StatefulWidget {
 
 class _allAdsState extends State<allAds> {
 
+
   var ads = [
     {
       "image": "Assets/car.jpg",
@@ -24,7 +25,7 @@ class _allAdsState extends State<allAds> {
       "datePosted": "03-02-21",
       "status": "Pending",
       "loc": "sr no. 2313, west road, south city, north state",
-      "name": "Jitendra Choudhary",
+      "name": "Gitendra Choudhary",
       "number": "9623876634",
       "email": "Jitendra93266@gmail.com",
     },
@@ -55,7 +56,7 @@ class _allAdsState extends State<allAds> {
       "datePosted": "03-02-21",
       "status": "Rejected",
       "loc": "sr no. 2313, south road, west city, north state",
-      "name": "Jitendra Choudharian",
+      "name": "Pitendra Choudharian",
       "number": "9623876636",
       "email": "Jitendra932662@gmail.com",
     },
@@ -71,7 +72,7 @@ class _allAdsState extends State<allAds> {
       "datePosted": "03-02-21",
       "status": "Accepted",
       "loc": "sr no. 2313, east road, south city, north state",
-      "name": "Jitendra Choudharies",
+      "name": "Ditendra Choudharies",
       "number": "9623876635",
       "email": "Jitendra932661@gmail.com",
     },
@@ -102,7 +103,8 @@ class _allAdsState extends State<allAds> {
                 children: [
                   InkWell(
                     onTap:(){
-                      data.setind(index);
+                      var obj= Ads(ads[index]["image"],ads[index]["title"],ads[index]["description"],ads[index]["category"],ads[index]["subcategory"],ads[index]["type/maker"],ads[index]["datePosted"],ads[index]["omr"],ads[index]["status"],ads[index]["loc"],ads[index]["name"],ads[index]["email"],ads[index]["number"]);
+                      data.setad(obj);
                       navigateToAd(context);
                     },
                     child: Card(
